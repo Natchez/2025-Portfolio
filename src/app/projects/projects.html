@@ -1,0 +1,55 @@
+<section id="my-projects"
+         class="grid gap-y-6">
+  @for (project of projects; track project.title) {
+    <div
+      class="flex flex-col md:flex-row bg-white rounded-xl shadow-md overflow-hidden max-w-3xl mx-auto">
+      <!-- Image -->
+      <div class="md:w-2/5">
+        <img
+          [src]="project.image"
+          [alt]="project.title"
+          class="h-48 w-full object-cover object-center md:h-full"
+        />
+      </div>
+
+      <!-- Content -->
+      <div class="p-6 flex flex-col justify-between md:w-3/5">
+        <div>
+          <h3 class="text-lg font-semibold text-wds-700">
+            {{ project.title }}
+          </h3>
+          <p class="mt-2 text-sm text-wds-600">
+            {{ project.description }}
+          </p>
+          <p class="mt-2 text-xs italic text-wds-600">
+            // {{ project.technologies.join(', ') }}
+          </p>
+        </div>
+
+        <div class="mt-4">
+          <button
+            [matMenuTriggerFor]="projectmenu"
+            #myTriggerBtn
+            class="inline-block w-full px-4 py-2 rounded-full bg-wds-600 text-white text-sm hover:bg-wds-700 transition">
+            View Project
+          </button>
+          <mat-menu #projectmenu="matMenu"
+                    class="bg-white">
+            <ul>
+              @for (link of project.links; track link.name) {
+                <li>
+                  <a [href]="link.url"
+                     target="_blank"
+                     class="w-full p-3 flex"
+                     rel="noopener noreferrer">
+                    {{ link.name }}
+                  </a>
+                </li>
+              }
+            </ul>
+          </mat-menu>
+        </div>
+      </div>
+    </div>
+  }
+</section>

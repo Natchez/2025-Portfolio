@@ -22,10 +22,16 @@
               {
                 "glob": "**/*",
                 "input": "public"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/assets",
+                "output": "assets"
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/custom-theme.scss"
             ]
           },
           "configurations": {
@@ -88,5 +94,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "81e37040-0c58-45ea-80d8-64eddf9442d8"
   }
 }

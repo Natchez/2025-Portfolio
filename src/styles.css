@@ -1,1 +1,51 @@
+@import "tailwindcss";
+
 /* You can add global styles to this file, and also import other style files */
+
+@import "tailwindcss";
+
+@theme {
+  /*White Dot Studio*/
+  --color-wds-50: #F3F4F8;
+  --color-wds-100: #E1E4ED;
+  --color-wds-200: #C5CADB;
+  --color-wds-300: #A6AEC6;
+  --color-wds-400: #8791AD;
+  --color-wds-500: #566483;
+  --color-wds-600: #4E5B77;
+  --color-wds-700: #414C65;
+  --color-wds-800: #343C50;
+  --color-wds-900: #262A38;
+
+  /*Common Colors*/
+  --color-light-contrast: #29292A;
+  --color-dark-contrast: #FFFCF6;
+  --color-primary: #141415;
+  --color-secondary: #3D3D3E;
+
+  /*Font Family*/
+  --font-sans: Lato, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+
+html, body {
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.cdk-overlay-pane {
+  width: auto !important;
+}
+
+.mat-mdc-menu-panel {
+  max-width: none !important;
+}
+
+.mat-mdc-menu-content {
+  li {
+    overflow: initial;
+  }
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

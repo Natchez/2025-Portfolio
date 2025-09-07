@@ -21,7 +21,7 @@
           <p class="mt-2 text-sm text-wds-600">
             {{ project.description }}
           </p>
-          <p class="mt-2 text-xs italic text-wds-600">
+          <p class="mt-2 text-xs text-wds-600">
             // {{ project.technologies.join(', ') }}
           </p>
         </div>
@@ -29,8 +29,7 @@
         <div class="mt-4">
           <button
             [matMenuTriggerFor]="projectmenu"
-            #myTriggerBtn
-            class="inline-block w-full px-4 py-2 rounded-full bg-wds-600 text-white text-sm hover:bg-wds-700 transition">
+            class="inline-block px-4 py-2 rounded-full bg-wds-600 text-white text-sm hover:bg-wds-700 transition">
             View Project
           </button>
           <mat-menu #projectmenu="matMenu"
